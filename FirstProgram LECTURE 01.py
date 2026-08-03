@@ -90,7 +90,9 @@ l = str(k)
 print(type(l))
 print(type(k))
 
+'''
 q = int(input('num1 :'))
 r = int(input('num2 :'))
 
 print(q >= r)
+'''
