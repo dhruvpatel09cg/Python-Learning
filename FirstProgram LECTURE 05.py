@@ -97,6 +97,71 @@ r = 0
 while r <= 15:
     if(r%2 == 0):
         r += 1
-        continue
+        continue #skip
     print(r)
     r += 1
+
+r = 0
+while r <= 15:
+    if(r%2 != 0):
+        r += 1
+        continue #skip
+    print(r)
+    r += 1
+
+list = [1, 2, 3, 4, 5, 6]
+
+for val in list:
+    print(val)
+
+tup = ("hi", "hello", "whatsup", "gm")
+
+for num in tup:
+    print(num)
+
+str = "DhruvPatel"
+
+for char in str:
+    if (char == "v"):
+        print("v found")
+        break
+    print(char)
+else:
+    print("END")
+
+bro = [1, 4, 9, 16, 25, 49, 64, 81, 100]
+
+for val in bro:
+    print(val)
+
+for val in bro:
+    if (val == 48):
+        print("RCB")
+        break
+    print(val)
+else:
+    print("na milo")
+
+for val in bro:
+    if (val == 49):
+        print("RCB")
+        break
+    print(val)
+else:
+    print("na milo")
+
+ok = [1, 2, 3, 4, 5, 4, 6]
+x = 4
+
+idx = 0
+for val in ok:
+    if(val == x):
+        print("no. found at", idx)
+    idx += 1
+
+idx = 0
+for val in ok:
+    if(val == x):
+        print("no. found at", idx)
+    idx += 1
+    print(val)
