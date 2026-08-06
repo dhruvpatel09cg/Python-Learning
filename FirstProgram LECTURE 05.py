@@ -165,3 +165,21 @@ for val in ok:
         print("no. found at", idx)
     idx += 1
     print(val)
+
+print(range(5))
+
+seq = range(10)
+
+for i in seq:
+    print(i)
+
+for l in range(7):
+    print(l)
+
+'''
+Range(start, stop*, step)
+By default start point is 1 and step value is also 1
+'''
+
+# Stop value is compulsory, other two are optional
+
