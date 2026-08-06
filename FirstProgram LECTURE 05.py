@@ -173,8 +173,8 @@ seq = range(10)
 for i in seq:
     print(i)
 
-for l in range(7):
-    print(l)
+for s in range(7):
+    print(s)
 
 '''
 Range(start, stop*, step)
@@ -183,3 +183,37 @@ By default start point is 1 and step value is also 1
 
 # Stop value is compulsory, other two are optional
 
+for t in range(3, 12):
+    print(t)
+
+for u in range(10, 51, 5):
+    print(u)
+
+for v in range(101):
+    print(v)
+
+for w in range(100, 0, -1):
+    print(w)
+
+for x in range(6, 61, 6):
+    print(x)
+
+'''
+y = int(input("enter a no.:"))
+
+for z in range(1, 11):
+    print(y * z)
+'''
+
+for a in range(10):
+    pass
+
+if i > 5:
+    pass
+
+print("don't wanna fill it")
+
+# WAP 1
+while n < 10:
+    print(n + n)
+    n += 1
