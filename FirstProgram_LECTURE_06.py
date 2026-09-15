@@ -95,3 +95,73 @@ def print_len(list):
 
 print_len(hero)
 print_len(cities)
+
+def print_element(list):
+    for d in list:
+        print(d, end=" ")
+
+print_element(cities)
+print()
+
+def factorial(n):
+    fact = 1
+    for i in range(1, n+1):
+        fact *= i
+    print(fact)
+
+factorial(9)
+
+def converter(usd):
+    inr = usd * 96
+    print(usd, "$ =", "₹", inr)
+
+converter(39)
+
+# num = int(input("No.: "))
+# for i in range(1):
+#     if num % 2 == 0:
+#         print("even")
+#     else:
+#         print("odd")
+
+# num = int(input("Num:"))
+# if num%2 == 0:
+#     print(num, "Even")
+# else:
+#     print(num, "Odd")
+
+
+#--> Recursive Functions
+# n = int(input("No.:"))
+# def show(n):
+#     if(n == 0):
+#         return
+#     print(n)
+#     show(n-1)
+#     print("end") # used to understand call stacks
+# show(n)
+
+def fact(n):
+    if (n == 0 or n == 1):
+        return 1
+    else:
+        return n * fact(n-1)
+
+print(fact(7))
+
+def calc_sum(n):
+    if (n == 0):
+        return 0
+    return calc_sum(n-1) +n
+
+ok = calc_sum(20)
+print(ok)
+
+subject = ["Py", "HTML", "CSS", "JS"]
+def list_print(subject, idx=0):
+    if (len(subject)==idx):
+        return
+    print(list[idx])
+    print(subject, idx+1)
+
+list_print(subject)
