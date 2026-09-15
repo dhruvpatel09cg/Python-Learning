@@ -20,7 +20,7 @@ b = 4
 sum = a + b
 print(sum)
 
-# function defination
+# function definition
 def calc_sum(a, b): #parameters
     sum = a + b
     print(sum)
@@ -74,6 +74,24 @@ print("patel")
 print("dhruv",end="")
 print("patel")
 
-for i in range(2, 4, 10):
+for i in range(2, 40, 10):
     print(i)
     i += 1
+
+status()
+
+def calc_prod (a=1, b=1):
+    print(a * b)
+    return a * b
+
+calc_prod(7, 4)
+
+# WAF 1
+cities = ["Ahmedabad", "Delhi", "Mumbai", "Chennai", "Hyderabad", "Mehsana"]
+hero = ["thor", "hawk eye", 4, "45"]
+
+def print_len(list):
+    print(len(list))
+
+print_len(hero)
+print_len(cities)
