@@ -161,7 +161,7 @@ subject = ["Py", "HTML", "CSS", "JS"]
 def list_print(subject, idx=0):
     if (len(subject)==idx):
         return
-    print(list[idx])
-    print(subject, idx+1)
+    print(subject[idx])
+    list_print(subject, idx+1)
 
 list_print(subject)
