@@ -43,3 +43,7 @@ f.close()
 # f = open("..\I-Oinpy.html","a")
 # f.close()
 
+f = open("D:\\Sem 1\\git\\git-rebase\\Main.txt","a+")
+f.write("\nNow I am trying both append and read at same time.\nOm is distracting me.")
+data = f.read()
+f.close()
