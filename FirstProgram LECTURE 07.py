@@ -24,4 +24,3 @@ print(line5)
 line6 = f.readline()
 print(line6)
 f.close()
-
