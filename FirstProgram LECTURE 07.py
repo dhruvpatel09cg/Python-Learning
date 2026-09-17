@@ -24,3 +24,22 @@ print(line5)
 line6 = f.readline()
 print(line6)
 f.close()
+
+# Two types of write mode:- a--> Append: write at end , w--> Write: overwrite(delete previous and add new content from zero)
+
+f = open("D:\\Sem 1\\git\\git-rebase\\Main.txt","w")
+f.write("New content added.\nRemoved the old data.")
+f.close()
+
+f = open("D:\\Sem 1\\git\\git-rebase\\Main.txt","a")
+f.write("\nThis is appended data.\nYou may see it at end of old data.")
+f.close()
+
+# # If we open any non-existing file with a or w in python it makes one for us at given path.
+
+# f = open("..\I-O in py.txt","w")
+# f.close()
+
+# f = open("..\I-Oinpy.html","a")
+# f.close()
+
