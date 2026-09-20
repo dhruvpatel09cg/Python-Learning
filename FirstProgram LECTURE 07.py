@@ -50,5 +50,11 @@ f.close()
 
 # r+ --> It reads and replaces the word from starting according to new given words.
 f = open("D:\\Sem 1\\git\\git-rebase\\Main.txt", "r+")
+f.write("abc") # new was replaced by abc
+print(f.read()) # as abc was written so pointer was at newt word to it so abc was excluded in read
+f.close
+
+f = open("D:\\Sem 1\\git\\git-rebase\\Main.txt", "r+")
+print(f.read()) # adding read before write adds the write content at the end of content already written as pointer comes to end after read function.
 f.write("abc")
 f.close
