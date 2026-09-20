@@ -58,3 +58,4 @@ f = open("D:\\Sem 1\\git\\git-rebase\\Main.txt", "r+")
 print(f.read()) # adding read before write adds the write content at the end of content already written as pointer comes to end after read function.
 f.write("abc")
 f.close
+
