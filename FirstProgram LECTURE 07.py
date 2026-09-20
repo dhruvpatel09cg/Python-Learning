@@ -54,8 +54,39 @@ f.write("abc") # new was replaced by abc
 print(f.read()) # as abc was written so pointer was at newt word to it so abc was excluded in read
 f.close
 
-f = open("D:\\Sem 1\\git\\git-rebase\\Main.txt", "r+")
-print(f.read()) # adding read before write adds the write content at the end of content already written as pointer comes to end after read function.
-f.write("abc")
-f.close
+# f = open("D:\\Sem 1\\git\\git-rebase\\Main.txt", "r+")
+# print(f.read()) # adding read before write adds the write content at the end of content already written as pointer comes to end after read function.
+# f.write("abc")
+# f.close
 
+f = open("D:\\Sem 1\\git\\git-rebase\\Main.txt","w+")
+f.write("Trying +w\n1st write then read mode")
+data = f.read()# first write and then read deletes old content and add completely new content you written also read will give empty line as pointer will be at end
+f.close()
+print(data)
+
+f = open("D:\\Sem 1\\git\\git-rebase\\Main.txt","w+")
+data = f.read()
+f.write("Trying +w again\nbut its read first then write")
+f.close()# this will give a large blank space as use of +w will delete all the data then reading it will have no content remain to print it.
+print(data)
+
+f = open("D:\\Sem 1\\git\\git-rebase\\Main.txt","a+")
+data = f.read()
+f.write("\nThis is a+\nits read first then write")
+f.close()# this is giving blank line as append will move cursor at end of file 
+print(data)
+
+
+f = open("D:\\Sem 1\\git\\git-rebase\\Main.txt","a+")
+f.write("\nThis is a+ again\nbut its write first then read")
+data = f.read()#This also give you the blank space as after adding content by append pointer will be at end.
+f.close()
+print(data)
+
+with open("D:\\Sem 1\\git\\git-rebase\\Main.txt","r") as f:
+    data= f.read()
+    print(data)
+
+with open("D:\\Sem 1\\git\\git-rebase\\Main.txt","w") as f:
+    data= f.write("This content is written using 'with' syntax\nUse of 'with' means no need of close file after operation")
