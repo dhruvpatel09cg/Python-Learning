@@ -47,3 +47,8 @@ f = open("D:\\Sem 1\\git\\git-rebase\\Main.txt","a+")
 f.write("\nNow I am trying both append and read at same time.\nOm is distracting me.")
 data = f.read()
 f.close()
+
+# r+ --> It reads and replaces the word from starting according to new given words.
+f = open("D:\\Sem 1\\git\\git-rebase\\Main.txt", "r+")
+f.write("abc")
+f.close
