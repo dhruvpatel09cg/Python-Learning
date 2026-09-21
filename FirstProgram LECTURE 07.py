@@ -90,3 +90,9 @@ with open("D:\\Sem 1\\git\\git-rebase\\Main.txt","r") as f:
 
 with open("D:\\Sem 1\\git\\git-rebase\\Main.txt","w") as f:
     data= f.write("This content is written using 'with' syntax\nUse of 'with' means no need of close file after operation")
+
+# Deleting a file
+# We need to import a external module or library called os(operating system)
+
+import os
+os.remove("D:\\Sem 1\\git\\git-rebase\\Main.txt")
