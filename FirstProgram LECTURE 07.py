@@ -98,12 +98,73 @@
 # os.remove("D:\\Sem 1\\git\\git-rebase\\Main.txt")
 
 #WAP 1
-with open("../practice.txt","w") as s:
-    s.write("Hi everyone\nwe are learning File I/O\nusing Java.\nI like programming in Java.")
+# with open("../practice.txt","w") as s:
+#     s.write("Hi everyone\nwe are learning File I/O\nusing Java.\nI like programming in Java.")
 
-#WAP 2
+# #WAP 2
+# with open("../practice.txt","r") as s:
+#     data = s.read()
+
+# new_data =data.replace("Java", "Python")
+# print(new_data)
+
+# with open("../practice.txt","w") as s:
+#     s.write(new_data)
+
+# #WAP 3
+# word = "learning"
+# with open("../practice.txt","r") as s:
+#     data = s.read()
+#     if(data.find(word) != -1):
+#         print("Found")
+#     else:
+#         print("Not found")
+
+# def check_for_word():
+#     word = "learning"
+#     with open("../practice.txt","r") as s:
+#         data = s.read()
+#         if(data.find(word) != -1):
+#             print("Found")
+#         else:
+#             print("Not found")
+
+# #WAP 4
+# def check_for_line():
+#     word = "programming"
+#     line = True
+#     line_no = 1
+#     with open("../practice.txt","r") as s:
+#         while line:
+#             line = s.readline()
+#             if(word in line):
+#                 print(line_no)
+#                 return
+#             line_no += 1
+#     return -1
+
+# check_for_line()
+
+#WAP 5
+with open("../practice.txt","r") as s:
+    data = s.read()
+    print(data)
+
+    num = ""
+    for i in range(len(data)):
+        if(data[i] == ","):
+            print(int(num))
+            num = ""
+        else:
+            num += data[i]
+
+count = 0
 with open("../practice.txt","r") as s:
     data = s.read()
 
-new_data =data.replace("Java", "Python")
-print(new_data)
+    nums = data.split(",")
+    for val in nums:
+        if(int(val) % 2 == 0):
+            count += 1
+
+print(count)
