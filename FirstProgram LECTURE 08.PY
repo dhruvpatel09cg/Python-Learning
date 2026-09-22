@@ -109,3 +109,49 @@ s1.hello()
 Student.hello()
 
 # Abstraction : Hiding the implementation details of a class and only showing the essential features to the user.
+
+class Car:
+    def __init__(self):
+        self.acc = False
+        self.brk = False
+        self.clutch = False
+
+    def start(self):
+        self.acc = True
+        self.clutch = True
+        print("Car started...")
+
+car1 = Car()
+car1.start()
+# In above example the unnecessary steps which are not mandatory for user to know like acc True and clutch True are not shown that's what called Abstraction. We used in all the above examples.
+
+# Encapsulation : Wrapping data and functions into a single unit (object).
+
+# All the classes we created in this file till now are example of Encapsulation as they all wrapped each necessary methods and attributes in themselves.
+
+# WAP
+class Account:
+    def __init__(self, bal, acc):
+        self.balance = bal
+        self.account_no = acc
+
+    def debit(self, amount):
+        if amount<=self.balance:
+            print("remaining balance",self.balance-amount)
+        else:
+            print("no enough money")
+        self.balance -= amount
+
+    def credit(self, amount):
+        self.add = amount
+        print("New balance:", self.balance+amount)
+        self.balance += amount
+
+acc1 = Account(10000, 12345)
+print(acc1.balance)
+print(acc1.account_no)
+acc1.credit(7000)
+acc1.debit(6000)
+acc1.debit(20000)
+
+# WAP
