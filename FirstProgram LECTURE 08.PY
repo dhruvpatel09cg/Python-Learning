@@ -56,17 +56,54 @@ print(Student.college_name)
 # --> Methods 
 # classis made up of 2 things data(attributes) & methods |or| class may store attributes and methods
 
-class Student:
-    def __init__(self, fullname, marks):
-        self.name = fullname
+class Student: #Class
+    college = "GEM College" #Class attribute
+    def __init__(self, fullname, marks): #constructor
+        self.name = fullname #Object attribute
         self.marks = marks
 
-    def hello(self):
+    def hello(self): # Method
         print("hello", self.name)
 
     def get_marks(self):
         return self.marks
 
-s1 = Student("Karan", 85)
+s1 = Student("Karan", 85) #Object
 s1.hello()
 print(s1.get_marks())
+
+# WAP
+class Student:
+    def __init__(self, name, marks):
+        self.name = name
+        self.marks = marks
+
+    def avg(self):
+        sum = 0
+        for val in self.marks:
+            sum += val
+        print("hi", self.name, "your avg score is", sum/3)
+
+s1 = Student("Rohit", [85,94,96])
+s1.avg()
+
+# --> Static Methods
+# no need to use self and they work at class level
+class Student:
+    def __init__(self, name, marks):
+        self.name = name
+        self.marks = marks
+
+    @staticmethod #decorator
+    def hello():
+        print("hello")
+
+    def avg(self):
+        sum = 0
+        for val in self.marks:
+            sum += val
+        print("hi", self.name, "your avg score is", sum/3)
+
+s1 = Student("Rohit", [85,94,96])
+s1.hello()
+Student.hello()
