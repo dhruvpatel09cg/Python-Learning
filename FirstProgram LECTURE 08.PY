@@ -107,3 +107,5 @@ class Student:
 s1 = Student("Rohit", [85,94,96])
 s1.hello()
 Student.hello()
+
+# Abstraction : Hiding the implementation details of a class and only showing the essential features to the user.
