@@ -153,5 +153,3 @@ print(acc1.account_no)
 acc1.credit(7000)
 acc1.debit(6000)
 acc1.debit(20000)
-
-# WAP
