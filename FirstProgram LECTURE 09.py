@@ -222,3 +222,57 @@ num3.showNumber()
 # num3.showNumber() #no need to use this after Dunder
 # Dunder functions: used __ before
 
+class Circle:
+    def __init__(self, rad):
+        self.rad = rad
+
+    def Area(self):
+        return 3.14*self.rad**2
+
+    def Perimeter(self):
+        return 2*3.14*self.rad
+
+c1 = Circle(4)
+print(c1.Perimeter())
+print(c1.Area())
+
+class Employee:
+    def __init__(self, role, dept, salary):
+        self.role = role
+        self.dept = dept
+        self.salary = salary
+
+    def showDetails(self):
+        print(self.role)
+        print(self.dept)
+        print(self.salary)
+
+e1 = Employee("Accountant", "Account", "₹90,000")
+e1.showDetails()
+
+class Engineer(Employee):
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+        super().__init__("Engineer", "IT", "₹6,20,000")
+
+    def showDetails(self):
+        print(self.name)
+        print(self.age)
+
+eng1 = Engineer("Dhruv","24")
+eng1.showDetails()
+
+class Order:
+    def __init__(self, item, price):
+        self.item = item
+        self.price = price
+
+    def __gt__(self, ord2):
+        return self.price > ord2.price
+
+ord1 = Order("Chips", 20)
+ord2 = Order("Hell", 60)
+
+print(ord1 < ord2)
+print(ord1 > ord2)
