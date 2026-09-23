@@ -37,11 +37,44 @@ p1 = Person()
 # p1.__hello
 p1.welcome()
 
+# Inheritance
+# --> Single Inheritance
 class Car:
-    @staticmethod
+    @staticmethod # here we used staticmethod as start and stop of cars of every company(subclass) have same methods
     def start():
         print("Car started...")
 
     @staticmethod
     def stop():
         print("Car stopped.")
+
+class Toyota(Car):
+    def __init__(self, name):
+        self.name = name
+
+car1 = Toyota("Land Cruiser 300")
+car2 = Toyota("Vellfire")
+
+print(car1.name)
+car1.start()
+
+
+# --> Multi-level inheritance
+class Car:
+    @staticmethod 
+    def start():
+        print("Car started...")
+
+    @staticmethod
+    def stop():
+        print("Car stopped.")
+
+class Toyota(Car):
+    def __init__(self, name):
+        self.name = name
+
+car1 = Toyota("Land Cruiser 300")
+car2 = Toyota("Vellfire")
+
+print(car1.name)
+car1.start()
