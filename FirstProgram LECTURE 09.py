@@ -121,3 +121,29 @@ class Toyota(Car):
 
 car1 = Toyota("Hilux", "Hybrid")
 print(car1.name, car1.type)
+
+# @classmethod
+class Person:
+    name = "anonymous"
+
+    def changeName(self, name):
+        self.name = name
+        # Person.name = name
+        # self.__class__.name = name
+
+    @classmethod
+    def changeName(cls, name):
+        cls.name = name
+
+p1 = Person()
+p1.changeName("Rahul Kumar")
+print(p1.name)
+print(Person.name)
+
+# line 131 & 132 are alternative of @classmethod
+'''
+We have 3 type of methods:
+1] Static method ==> ()
+2] class method ==> (cls)
+3] instance method ==> (self)
+'''
