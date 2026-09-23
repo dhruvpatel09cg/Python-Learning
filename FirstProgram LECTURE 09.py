@@ -70,11 +70,14 @@ class Car:
         print("Car stopped.")
 
 class Toyota(Car):
-    def __init__(self, name):
-        self.name = name
+    def __init__(self, brand):
+        self.brand = brand
 
-car1 = Toyota("Land Cruiser 300")
-car2 = Toyota("Vellfire")
+class LC300(Toyota):
+    brand = "Toyota"
 
-print(car1.name)
-car1.start()
+    def __init__(self, f_type):
+        self.f_type = f_type 
+
+car1 = LC300("Petrol")
+print(car1.f_type, car1.brand)
