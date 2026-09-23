@@ -147,3 +147,29 @@ We have 3 type of methods:
 2] class method ==> (cls)
 3] instance method ==> (self)
 '''
+
+# @property
+class Student:
+    def __init__(self, phy, chem, math):
+        self.phy = phy
+        self.chem = chem
+        self.math = math
+        # self.percentage = str((self.chem + self.phy + self.math)/3) + "%"
+
+    # def calcper(self):
+    #     self.percentage = str((self.chem + self.phy + self.math)/3) + "%" # This is alternative of @property
+
+    @property
+    def percentage(self):
+        return str((self.chem + self.phy + self.math)/3) + "%"
+
+s1 = Student(98, 89, 92)
+print(s1.percentage)
+
+s1.phy = 86
+print(s1.phy)
+print(s1.percentage) # After using this the marks are changing but percentage remains as per old data
+
+# s1.calcper()
+# print(s1.percentage) # After using property no need to use this
+
