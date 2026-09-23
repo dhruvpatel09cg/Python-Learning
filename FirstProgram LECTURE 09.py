@@ -36,3 +36,12 @@ p1 = Person()
 # print(p1.__name)
 # p1.__hello
 p1.welcome()
+
+class Car:
+    @staticmethod
+    def start():
+        print("Car started...")
+
+    @staticmethod
+    def stop():
+        print("Car stopped.")

@@ -89,6 +89,7 @@ s1.avg()
 
 # --> Static Methods
 # no need to use self and they work at class level
+# Static methods are used when the function in class has no relation with objects or is common for all subclass of that class
 class Student:
     def __init__(self, name, marks):
         self.name = name
@@ -96,7 +97,7 @@ class Student:
 
     @staticmethod #decorator
     def hello():
-        print("hello")
+        print("hello") #like here printing 'hello' does not have any link with our object s1 so we used static method
 
     def avg(self):
         sum = 0
